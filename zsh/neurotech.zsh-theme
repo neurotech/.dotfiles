@@ -1,6 +1,5 @@
 function prompt_char {
-    git branch >/dev/null 2>/dev/null && echo '#' && return
-    hg root >/dev/null 2>/dev/null && echo 'Hg' && return
+    git branch >/dev/null 2>/dev/null && echo '>' && return
     echo '$'
 }
 
@@ -13,9 +12,9 @@ function collapse_pwd {
 }
 
 PROMPT='%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)%{$reset_color%}
-$(prompt_char) '
+%{$fg[yellow]%}$(prompt_char)%{$reset_color%} '
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
