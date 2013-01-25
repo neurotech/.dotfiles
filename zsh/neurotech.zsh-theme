@@ -12,7 +12,7 @@ function collapse_pwd {
     echo $(pwd | sed -e "s,^$HOME,~,")
 }
 
-PROMPT='%{$fg_bold[magenta]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)%{$reset_color%}
+PROMPT='%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)%{$reset_color%}
 $(prompt_char) '
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[yellow]%}"
