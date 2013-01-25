@@ -1,6 +1,6 @@
 function prompt_char {
-    git branch >/dev/null 2>/dev/null && echo '>' && return
-    echo '$'
+    git branch >/dev/null 2>/dev/null && echo '★' && return
+    echo '>'
 }
 
 function virtualenv_info {
@@ -14,8 +14,8 @@ function collapse_pwd {
 PROMPT='%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)%{$reset_color%}
 %{$fg[yellow]%}$(prompt_char)%{$reset_color%} '
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" on %U%{$fg[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}!"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[magenta]%}?"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%u %{$fg[red]%}!"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%u %{$fg[yello]%}?"
+ZSH_THEME_GIT_PROMPT_CLEAN="%u %{$fg[green]%}✔"
