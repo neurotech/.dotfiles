@@ -17,9 +17,9 @@ function deploygator() {
   middleman build
 
   echo "${YELLOW}Deploying with rsync...${RESET}"
-  rsync -avzr --progress --rsh="ssh -p 2222" ~/Dropbox/projects/electric-clouds/middleman/build/ timd@184.173.236.33:/home/timd/public_html/mm/
+  rsync -avzr --progress --human-readable --stats --rsh="ssh -p 2222" ~/Dropbox/projects/electric-clouds/middleman/build/ timd@184.173.236.33:/home/timd/public_html/mm/
 
   cd ${boomerang}
-  
+
   echo "${GREEN}Done.${RESET}"
 }
