@@ -8,7 +8,10 @@ RESET="\033[m"
 # SSH to HostGator
 alias gator='ssh -p 2222 timd@184.173.236.33'
 
-# Build and Sync to HostGator
+# Shortcut to working directory
+alias ecd='cd ~/Dropbox/projects/electric-clouds/projects/middleman/'
+
+# Build and sync to HostGator
 function deploygator() {
   boomerang=$PWD
 
