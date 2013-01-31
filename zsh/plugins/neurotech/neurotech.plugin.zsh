@@ -9,7 +9,7 @@ RESET="\033[m"
 alias gator='ssh -p 2222 timd@184.173.236.33'
 
 # Shortcut to working directory
-alias ecd='cd ~/Dropbox/projects/electric-clouds/projects/middleman/'
+alias ecd='cd ~/Dropbox/projects/electric-clouds/middleman/'
 
 # Build and sync to HostGator
 function deploygator() {
