@@ -5,6 +5,9 @@ GREEN="\033[1;32m"
 YELLOW="\033[1;33m"
 RESET="\033[m"
 
+# Brew Update/Upgrade/Cleanup
+alias bu='brew update && brew upgrade && brew cleanup'
+
 # SSH to HostGator
 alias gator='ssh -p 2222 timd@184.173.236.33'
 
@@ -20,7 +23,7 @@ function deploygator() {
   bundle exec middleman build --clean
 
   echo "${YELLOW}Deploying with rsync...${RESET}"
-  rsync -avzr --progress --human-readable --stats --rsh="ssh -p 2222" ~/Dropbox/projects/electric-clouds/middleman/build/ timd@184.173.236.33:/home/timd/public_html/mm/
+  rsync -avzr --progress --human-readable --delete --rsh="ssh -p 2222" ~/Dropbox/projects/electric-clouds/middleman/build/ timd@184.173.236.33:/home/timd/public_html/mm/
 
   cd ${boomerang}
 
