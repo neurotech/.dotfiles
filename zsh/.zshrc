@@ -2,7 +2,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="neurotech"
 
-plugins=(ruby rails git heroku brew gem neurotech)
+plugins=(ruby rails git heroku brew gem zsh-syntax-highlighting neurotech)
 
 source $ZSH/oh-my-zsh.sh
 
