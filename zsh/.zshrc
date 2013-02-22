@@ -12,4 +12,6 @@ export EDITOR='subl -w'
 
 alias ls='ls -Gph'
 
+alias grep='grep --color=auto'
+
 alias m="git add .;git commit -m"
