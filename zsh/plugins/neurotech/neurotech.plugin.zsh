@@ -13,7 +13,7 @@ alias bu='brew update && brew upgrade && brew cleanup'
 alias gator='ssh -p 2222 timd@184.173.236.33'
 
 # Shortcut to working directory
-alias ecd='cd ~/Dropbox/projects/electric-clouds/middleman/'
+alias ecd='cd ~/Dropbox/projects/timdouglas.co/'
 
 # Build and sync to HostGator
 function deploygator() {
