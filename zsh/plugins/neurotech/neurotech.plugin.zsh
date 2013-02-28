@@ -24,7 +24,7 @@ function deploygator() {
   bundle exec middleman build --clean
 
   echo "${YELLOW}Deploying with rsync...${RESET}"
-  rsync -avzr --exclude='.DS_Store' --progress --human-readable --delete --rsh="ssh -p 2222" ~/Dropbox/projects/timdouglas.co timd@184.173.236.33:/home/timd/public_html/timdouglas.co/
+  rsync -avzr --exclude='.DS_Store' --progress --human-readable --delete --rsh="ssh -p 2222" ~/Dropbox/projects/timdouglas.co/build/ timd@184.173.236.33:/home/timd/public_html/timdouglas.co/
 
   cd ${boomerang}
 
