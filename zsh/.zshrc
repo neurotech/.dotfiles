@@ -6,7 +6,7 @@ plugins=(ruby rails git heroku brew gem zsh-syntax-highlighting neurotech)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=/Users/neurotech/bin:/Users/neurotech/.rbenv/bin:/Users/neurotech/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=./bin:/Users/neurotech/bin:/Users/neurotech/.rbenv/bin:/Users/neurotech/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 export EDITOR='subl -w'
 
@@ -15,3 +15,6 @@ alias ls='ls -Gph'
 alias grep='grep --color=auto'
 
 alias m="git add .;git commit -m"
+
+# Middleman
+alias ms='bundle exec middleman server'

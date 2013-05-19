@@ -1,16 +1,18 @@
 # Colour Variables
 RED="\033[1;31m"
 GREEN="\033[1;32m"
+YELLOW="\033[1;33m"
 BLUE="\033[1;34m"
 MAGENTA="\033[1;35m"
-YELLOW="\033[1;33m"
+CYAN="\033[1;36m"
 RESET="\033[m"
 
 # Brew Update/Upgrade/Cleanup
 alias bu='brew update && brew upgrade && brew cleanup'
 
-# SSH to HostGator
-alias gator='ssh -p 2222 timd@184.173.236.33'
+# SSH Shortcuts
+alias gator='ssh -p 2222 ${GATOR_HOST}'
+alias carmine='ssh ${CARMINE_USER}@${CARMINE_HOST}'
 
 # Shortcut to working directory
 alias ecd='cd ~/Dropbox/projects/timdouglas.co/'
@@ -24,7 +26,7 @@ function deploygator() {
   bundle exec middleman build --clean
 
   echo "${YELLOW}Deploying with rsync...${RESET}"
-  rsync -avzr --exclude='.DS_Store' --progress --human-readable --delete --rsh="ssh -p 2222" ~/Dropbox/projects/timdouglas.co/build/ timd@184.173.236.33:/home/timd/public_html/timdouglas.co/
+  rsync -avzr --exclude='.DS_Store' --progress --human-readable --delete --rsh="ssh -p 2222" ~/Dropbox/projects/timdouglas.co/build/ ${GATOR_HOST}:/home/timd/public_html/timdouglas.co/
 
   cd ${boomerang}
 
