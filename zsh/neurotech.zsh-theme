@@ -17,5 +17,5 @@ PROMPT='%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)%{$re
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %U%{$fg[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%u %{$fg[red]%}!"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%u %{$fg[yello]%}?"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%u %{$fg[yellow]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN="%u %{$fg[green]%}✔"
